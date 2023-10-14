@@ -1,0 +1,147 @@
+React - frontend Technonology
+-------------------------------
+- to create UI 
+
+UI - user Interface 
+---------------------
+the point where the user - computer(software) interaction/communication take place 
+
+- react make use of javascript libraries to create UI 
+
+-libraries: predifined code - to do particular task 
+- framework : predifined code - highly restricted 
+
+refer libraries VS framework 
+
+features of react 
+------------------
+1)to create UI
+2) single page application : web application or web site that intract with the user by dynamically rewritting the 
+                             current webpage with new dates from the webserver , instead of the default method of loading 
+                             all the pages separately.
+
+3) Declarative application :     doesnot access directly DOM 
+
+4) virtual DOM :  first lod the rall dom then after change the node that changes noted in virtual node then after compair virtual dom and reall dom and only change the reall dom that changed portion only.
+                -created on react 
+                -real dom created by browser
+    Diffing : process of compairing virtual dom and real dom 
+    Reconciliation : process of updating real dom
+
+5)immutable : cannot change value 
+
+6) pure function :functions that ascepts immutable variables and return an object - result only depend onthe variable 
+    eg: react component
+
+7) data shering : unidirection - parent - chiled
+
+8) language ; jsx - javascript xml (combination of javascript HTML,css)
+        -jsx expression must be inside a single parent element 
+        -empty tag - react fragment 
+        -js code -> jsx -{}
+
+9) Transpliing : process of converting JSX into HTML,css,javascript 
+                    BABEL - convert 
+
+how to create a react project 
+--------------------------------
+
+1) npx create-react-app projectnamme
+
+    npm - node package exicute - execute 
+    npx - node package manager - install 
+  create a folder in name of project 
+
+2)run - npm start 
+
+
+
+files 
+------
+1) readme.md - holds description of the react application 
+2) package.json - hold npm configration - dependencies - installed libraries 
+3) package-lock.json - it holds vertion of installed libraries 
+4) .gitignor - holds file tht neednot to be pushed into git 
+5) node_modules - its a copy of installed libraries 
+6)public - holds those file which can be accessed throuhout the project 
+
+7) index.html - is the only page that load in the browser 
+
+8) reportWebVitals.js - used to make perfomance of the react application 
+
+component : basic unit of  react application 
+- should start with capital letter 
+- inorder to use components in other files 
+    1) export - export default componentname ;
+    2) import - import variable from 'url'
+    3) self closing tag - </componentname>
+
+
+Different type of components
+ 
+1) functional components
+------------------------
+eg: App components 
+- name should start with capital letter
+
+function Componentname (){
+    //js code 
+    return (
+        //jsx code
+    )
+}
+export default componentname
+
+2) class components 
+--------------------
+- name should start with capital letter
+-one class inherit another class key word use - Extends 
+-if one object inherit another object key word - proto 
+- return exicute in inside a function (methord)
+methord syntax - 
+class componentname Extends React.Component{
+    methord name(render) (){
+    return (
+    //jsx code
+        <div> </div>
+    )
+    }
+}
+
+export default Componentname
+
+mutable and immutable datatype in javascript ?
+
+BASIC STructure lode (functional)- rfce
+                     (class)     -rcc 
+
+
+how data sharing happens in react components
+--------------------------------------------
+-unidirectional  -  parent - chiled 
+
+-props - object 
+    {key:value}
+
+
+object destructuring -
+normal - child(props)
+
+d- child({key,...})
+
+
+
+how to style react component using css
+--------------------------------------
+1)inline 
+2)External 
+
+1)inline 
+-------
+style = "property:value"
+jsx 
+style={{property:propertyvalue}}
+
+2)External 
+-----------
+  -external file - external filename.css
