@@ -145,3 +145,12 @@ style={{property:propertyvalue}}
 2)External 
 -----------
   -external file - external filename.css
+  -import -> import 'url'
+
+3)css module 
+
+  extention - filename.module.css 
+   - can store into a variable and can style using this variable 
+   - can create only in src folder 
+   -global access 
+   
