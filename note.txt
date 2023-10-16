@@ -191,3 +191,38 @@ omChange(callback) - call
         <input type="text" placeholder='Entername' onChange={(e)=>clickchange(e)}>
 
 
+conditional rendering
+---------------------
+Rendering - lodiing to browser 
+
+conditional statement using rendering 
+
+1)if - truthy(oprator) - &&
+2)if else - ternary(oprator) - ? :
+
+
+react State 
+============
+-state is an object which stores properties(variables inside a class) of a react class component.{key:value} 
+        Eg:    
+                class Random extends React.Component {
+
+                  constructor(){//props passing  //tointialize the property
+                        super() //method  //to acces the property
+                        this.state={cname:'jumana'}
+                    }
+        
+            <h2>she is ={this.state.cname}</h2>
+
+-When the state change the entire component re-render.
+
+    -setState() - to change the value of a state 
+
+
+
+
+life cycle of ract class component 
+----------------------------------
+1) mountin phase   : component added to DOM 
+2) updating phase   : editing of component 
+3) unmounting phase : removal of component from DOM
