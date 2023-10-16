@@ -153,4 +153,41 @@ style={{property:propertyvalue}}
    - can store into a variable and can style using this variable 
    - can create only in src folder 
    -global access 
-   
+   Limitation - only created on SRC folder 
+
+React event handling 
+--------------------
+ation by user change in the DOM 
+
+html onclick ="function()"
+
+jsx onClick ={}
+Function without argument 
+   onClick = {function name}
+   Eg:
+        const show =()=>{
+            alert('button')}
+            <button type='button' onClick={show}
+
+function with argument 
+     onClick = {()=>functionname(arg)}
+
+     Eg:     const add =(user)=>{
+    alert(`${user} is added`)}
+     <button type='button' onClick={()=>add('melbin')} >
+
+
+
+how to get value from input box 
+-------------------------------
+html = inputid.value 
+
+omChange(callback) - call
+
+    Eg:  const clickchange=(e)=>{
+         console.log(e.target.value);
+            }
+
+        <input type="text" placeholder='Entername' onChange={(e)=>clickchange(e)}>
+
+
