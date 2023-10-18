@@ -79,7 +79,7 @@ component : basic unit of  react application
 
 Different type of components
  
-1) functional components
+1) functional components / stateLess Component(no lifecycle)
 ------------------------
 eg: App components 
 - name should start with capital letter
@@ -92,7 +92,7 @@ function Componentname (){
 }
 export default componentname
 
-2) class components 
+2) class components / stateFull Component (lifecycle,state component)
 --------------------
 - name should start with capital letter
 -one class inherit another class key word use - Extends 
@@ -221,8 +221,32 @@ react State
 
 
 
-life cycle of ract class component 
+life cycle of react class component ( also say statefull component)
 ----------------------------------
 1) mountin phase   : component added to DOM 
+    -constroctor() - intialise state 
+    -get
 2) updating phase   : editing of component 
 3) unmounting phase : removal of component from DOM
+
+
+
+Hooks 
+------
+hooks  - predefined function 
+- to provide state and lifecycle to functional components.
+
+rules 
+------
+1) import hooks from react library to functional component 
+2)can call hook only at the top section of then functional component.
+3)cannot use hooks on conditional bases. 
+
+
+Hooks are of Different type :
+-----------------------------
+1) predefined hooks                 2)Customs Hooks 
+ -Eg: useState 
+ 
+
+ -to create state in functional component.
