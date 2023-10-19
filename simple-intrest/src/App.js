@@ -10,11 +10,19 @@ function App() {
   const [principle,SetPrinciple] =useState(0)
   const[rate,setRate] =useState(0)
   const [year,setyear] = useState(0)
-
+  const [isprinciple,setIsprinciple]= useState(true)
   const getValidate =(e)=>{
     const {name,value}=e.target 
-    console.log(name,value);
+    // console.log(name,value);
+    // console.log(!!value.match(/^[0-9]+$/)) it's given true or fales 
+    if(!!value.match(/^[0-9]+$/)){
     SetPrinciple(value)
+      setIsprinciple(true)
+    }
+    else{
+      SetPrinciple(value)
+      setIsprinciple(false)
+    }
   }
   return (
  <div style={{height:'100vh'}} className='d-flex justify-content-center align-items-center w-100 bg-dark'>
@@ -29,8 +37,13 @@ function App() {
           <div className='mb-3'>
             <TextField id="outlined-basic" name='principle' value={principle || ""} onChange={(e)=>getValidate(e)} className='w-100' label="Principle Amount" variant="outlined" /> 
           </div>
+          {!isprinciple &&
+          <div>
+          <p className='text-danger fw-bolder'>*invalid</p>
+          </div>}
+          
           <div className='mb-3'>
-            <TextField id="outlined-basic" name='rate' value={rate|| ""} className='w-100' label="Rate of Intrest (p.a) %" variant="outlined" />
+           <TextField id="outlined-basic" name='rate' value={rate|| ""} className='w-100' label="Rate of Intrest (p.a) %" variant="outlined" />
           </div>
           <div className='mb-3'>
             <TextField id="outlined-basic" name='year' value={ year|| ""} className='w-100' label="year (Yr)" variant="outlined" />
