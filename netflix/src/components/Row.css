@@ -21,3 +21,7 @@
 .movie:hover{  
     transform: scale(1.06);
 }
+
+.movie-poster{
+    height:350px;
+}

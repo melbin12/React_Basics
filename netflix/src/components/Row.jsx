@@ -14,18 +14,18 @@ function Row({title,fetchUrl,isPoster}) {
           // it's not work becouse it only function definition (use function call after that it's work)
    }
 
-   console.log(allmovie)
+  //  console.log(allmovie)
   useEffect(()=>{
     fetchData()
   },[]);
 
   return (
     <div className='row'>
-     <h1 style={{color:'White'}}>{title}</h1>
+     <h1>{title}</h1>
      <div className='movie-row'>
       {
         allmovie?.map(item=>(
-          <img className='movie' src={`${base_url}${isPoster?item.poster_path:item.backdrop_path}`} alt="no image" />
+          <img className={`movie ${isPoster && 'movie-poster'}`} src={`${base_url}${isPoster?item.poster_path:item.backdrop_path}`} alt="no image" />
         ))
       }
      </div>
