@@ -2,7 +2,7 @@ import axios from "axios";
 
 // eslint-disable-next-line no-undef
 const instance = axios.create({
-  baseURL: 'https://some-domain.com/api/',
+  baseURL: 'https://api.themoviedb.org/3',
 });
 
 export default instance
